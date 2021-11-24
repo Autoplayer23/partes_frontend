@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card-body">
+        <h3 class="card-title">{{titulo}}</h3>
+        <form >
+            <div class="form-group row">
+                <label for="parte" class="col-from-label col-sm-2"><h3>Parte</h3></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="Parte" [(ngModel)]="parte.parte">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group row">
+                <label for="nombre demonio" class="col-from-label col-sm-2"><h5>Nombre demonio</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombre demonio" [(ngModel)]="parte.nombre_domonio">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group row">
+                <label for="resultado batalla" class="col-from-label col-sm-2"><h5>resultado batalla</h5></label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="resultado batalla" [(ngModel)]="parte.resultado_batalla">
+                </div>
+            </div>
+           
+            <button class="btn btn-success" role="button" (click)='create()' *ngIf= "router.url=='/partes/form' else elseBlock">Registrar</button>
+            <ng-template #elseBlock >
+                <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
+            </ng-template>
+            
+        </form>
+    </div>
+</div>
+
